@@ -1,0 +1,24 @@
+<?php
+
+namespace Ihsanuddin;
+
+use Ihsanuddin\Http\Kernel;
+
+class Application extends Kernel
+{
+    protected $config;
+
+    public function __construct(array $config = array())
+    {
+        $this->config = $config;
+
+        parent::__construct();
+    }
+
+    public function getConfig($key)
+    {
+        if (array_key_exists($key, $this->config)) {
+            return $this->config[$key];
+        }
+    }
+}
