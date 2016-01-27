@@ -14,7 +14,6 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 use Ihsanuddin\Event\PreRequestEvent;
 use Ihsanuddin\Event\PostRequestEvent;
 use Ihsanuddin\Event\PreResponseEvent;
-use Ihsanuddin\Event\PostResponseEvent;
  
 class Kernel implements HttpKernelInterface
 {
@@ -25,6 +24,8 @@ class Kernel implements HttpKernelInterface
     const PRE_RESPONSE = 'pre.response';
 
     protected $routes;
+
+    protected $dispatcher;
  
     public function __construct()
     {
@@ -68,7 +69,7 @@ class Kernel implements HttpKernelInterface
     {
         if (! is_callable($controller)) {
 
-            throw new InvalidArgumentException(sprintf('%s is not callable.'));
+            throw new \InvalidArgumentException(sprintf('%s is not callable.'));
         }
 
         $this->routes->add($path, new Route(

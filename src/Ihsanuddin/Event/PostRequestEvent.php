@@ -13,7 +13,10 @@ class PostRequestEvent extends Event
     {
         $this->request = $request;
     }
- 
+
+    /**
+     * @return Request
+     */
     public function getRequest()
     {
         return $this->request;

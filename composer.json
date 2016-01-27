@@ -6,7 +6,7 @@
         "symfony/event-dispatcher": "3.*"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "Ihsanuddin": "src/"
         }
     }

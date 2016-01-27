@@ -1,15 +1,16 @@
 <?php
-$loader = require '../vendor/autoload.php';
+$loader = require __DIR__.'/../vendor/autoload.php';
  
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Ihsanuddin\Event\PreRequestEvent;
 use Ihsanuddin\Event\PostRequestEvent;
 use Ihsanuddin\Event\PreResponseEvent;
+use Ihsanuddin\Application;
 
 $request = Request::createFromGlobals();
 
-$app = new Ihsanuddin\Application(array('database' => array('host' => 'localhost')));
+$app = new Application(array('database' => array('host' => 'localhost')));
 
 var_dump($app->getConfig('database'));
 

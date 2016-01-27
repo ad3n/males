@@ -13,7 +13,10 @@ class PreResponseEvent extends Event
     {
         $this->response = $response;
     }
- 
+
+    /**
+     * @return Response
+     */
     public function getResponse()
     {
         return $this->response;
