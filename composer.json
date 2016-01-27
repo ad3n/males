@@ -1,12 +1,12 @@
 {
     "require": {
-        "symfony/http-foundation": "2.6.*",
-        "symfony/http-kernel": "2.6.*",
-        "symfony/routing": "2.6.*",
-        "symfony/event-dispatcher": "2.6.*"
+        "symfony/http-foundation": "3.*",
+        "symfony/http-kernel": "3.*",
+        "symfony/routing": "3.*",
+        "symfony/event-dispatcher": "3.*"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "Ihsanuddin": "src/"
         }
     }
